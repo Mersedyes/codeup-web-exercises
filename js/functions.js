@@ -21,16 +21,15 @@ console.log(sayHello("Mersedyes"));
 //  */
 // let myName = prompt("What is your preferred name?");
 //
-// let helloMessage = sayHello("Mersedyes");
+let helloMessage = sayHello("Mersedyes");
 //
-// console.log(helloMessage)
+console.log(helloMessage)
 // /**
 //  * TODO:
 //  * Store your name as a string in a variable named 'myName', and pass that
 //  * variable to the 'sayHello' function. You should see the same output in the
 //  * console.
 //  */
-//
 // // Don't modify the following line, it generates a random number between 1 and 3
 // // and stores it in a variable named random
 // var random = Math.floor((Math.random() * 3) + 1);
@@ -52,12 +51,13 @@ console.log(sayHello("Mersedyes"));
 //  * different result everytime you refresh the page if you are using the random
 //  * number)
 //  */
-// var random = Math.floor((Math.random() * 3) + 1);
+var random = Math.floor((Math.random() * 3) + 1);
 //
-// function isTwo(num){
-//     return num === 2;
-// }
-// console.log(random + " is equal to 2: " + isTwo(random));
+function isTwo(num){
+     return num === 2; //single boolean expression either true or false, could have used if else statement but this is the short hand
+ }
+console.log(random);
+console.log(isTwo(random));
 // /**
 //  * TODO:
 //  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -105,7 +105,7 @@ console.log(calculateTip(.25, 25.50));
 console.log(calculateTip(.15, 33.42));
 console.log(calculateTip(tipWhat, billWhat));
 alert("You should leave $" + calculateTip(tipWhat, billWhat) + " as a tip.");
-
+}
 // /**
 //  * TODO:
 //  * Use prompt and alert in combination with your calculateTip function to
