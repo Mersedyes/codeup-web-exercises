@@ -30,12 +30,26 @@ function canGetRideshare(hasDriversNearby, hasEnoughMoney){
 }
 getToDestination(16, true, true, true, true );
 //
+// Switch Statements - alternative to if else statements
 //
-//
-// function canGetRideshare(age, driverNearBy, enoughMoney){
-//     if (driverNearBy && enoughMoney) {
-//
-//     }
-// }
-// getToDestination(16, false, false, true);
+// if(todaysWeather === "snowing") {
+//console.log ("stay inside")
+//a way to be explicit in what you want
+todaysWeather = todaysWeather.toLowerCase();
+switch (todaysWeather) {
+    case "snowing":
+        console.log("please stay inside");
+        break;
 
+        case "raining":
+            console.log("grab your umbrella and boots");
+            break;
+
+    case "hailing":
+        console.log("cover your car and call your insurance company...");
+        break;
+
+    default:
+        console.log("go play in the sun");
+        break;
+}
