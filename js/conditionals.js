@@ -21,24 +21,102 @@
 //  * console.logging the function's return value
 //  */
 //
-// // Don't change the next two lines!
-// // These lines create two variables for you:
-// // - `colors`: a list of the colors of the rainbow
-// // - `randomColor`: contains a single random color value from the list (this
-// //                  will contain a different color every time the page loads)
-// var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-// var randomColor = colors[Math.floor(Math.random() * colors.length)];
-// /**
+// function analyzeColor(colorInput) { //the parameter is colorInput; used to take in dynamic input (aka the unknown)
+//     colorInput = colorInput.toLowerCase();
+//
+//     if (colorInput === "red"){
+//         console.log("Strawberries are red")
+//     } else if (colorInput === "blue"){
+//         console.log("Blue is the color of the sky");
+//     } else if (colorInput === "orange"){
+//         console.log("Orange is the color of the horizon during a sunset");
+//     } else if (colorInput === "yellow"){
+//         console.log("Yellow like canaries and lemons");
+//     } else if (colorInput === "green"){
+//         console.log("Green like algae in a pond");
+//     } else if (colorInput === "indigo"){
+//         console.log("I don't really know what's indigo but it is a color");
+//     } else if (colorInput === "Violet ") {
+//         console.log("Violet like African Violets");
+//     } else if (colorInput === "Black"){
+//         console.log("Black like an onyx. Although black is the absorption of all colors");
+//     } else if (colorInput === "White"){
+//         console.log("White like the clouds on a sunny day");
+//     } else (`Hmmmm....I didn't think of that ${colorInput}! How cool!`);
+// }
+// analyzeColor("red");
+// analyzeColor("blue");
+// analyzeColor("orange");
+// analyzeColor("yellow");
+// analyzeColor("green");
+// analyzeColor("indigo");
+// analyzeColor("violet");
+// analyzeColor("black");
+// analyzeColor("white");
+// analyzeColor("randomColor");
+// //END OF THIS ACTIVITY
+// // // Don't change the next two lines!
+// // // These lines create two variables for you:
+// // // - `colors`: a list of the colors of the rainbow
+// // // - `randomColor`: contains a single random color value from the list (this
+// // //                  will contain a different color every time the page loads)
+// let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'],
+//     randomColor = colors[Math.floor(Math.random() * colors.length)];
+// // /**
 //  * TODO:
 //  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
 //  * You should see a different message every time you refresh the page
-//  */
-//
+//  */ DONE
 // /**
 //  * TODO:
 //  * Comment out the code above, and refactor your function to use a switch-case statement
 //  */
-//
+const analyzeColor = colorInput => {
+    colorInput = colorInput.toLowerCase();
+    switch (colorInput){
+        case "red"
+        console.log(colorInput + ' is the perfect color I was thinking of too.');
+        break;
+
+        case "blue"
+        console.log(colorInput + ' is the perfect color I was thinking of too.');
+        break;
+
+        case "orange"
+        console.log(colorInput + ' is the perfect color I was thinking of too.');
+        break;
+
+        case "yellow"
+        console.log(colorInput + ' is the perfect color I was thinking of too.');
+        break;
+
+        case "green"
+        console.log(colorInput + ' is the perfect color I was thinking of too.');
+        break;
+
+        case "indigo"
+        console.log(colorInput + ' is the perfect color I was thinking of too.');
+        break;
+
+        case "violet"
+        console.log(colorInput + ' is the perfect color I was thinking of too.');
+        break;
+
+        case "black"
+        console.log(colorInput + ' is the perfect color I was thinking of too.');
+        break;
+
+        case "white"
+        console.log(colorInput + ' is the perfect color I was thinking of too.');
+        break;
+
+        default:
+            console.log("I didn't think about that one, but it is the perfect color");
+            break;
+    }
+
+    analyzeColor(colorInput);
+}
 // /**
 //  * TODO:
 //  * Prompt the user for a color when the page loads, and pass the input from the
