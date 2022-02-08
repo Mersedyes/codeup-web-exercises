@@ -1,6 +1,14 @@
 // "use strict";
 // /* ########################################################################## */
-//
+alert("Welcome to the Colorful World of Conditionals");
+
+let userInput;
+    userInput = prompt('Hello from Donut Disturb!');
+    console.log(userInput);
+
+let analyzeColor = prompt('What is your favorite color?');
+alert(`${userName}, ${analyzeColor} is my favorite color too!`);
+
 // /**
 //  * TODO:
 //  * Create a function named `analyzeColor` that accepts a string that is a color
@@ -21,39 +29,39 @@
 //  * console.logging the function's return value
 //  */
 //
-// function analyzeColor(colorInput) { //the parameter is colorInput; used to take in dynamic input (aka the unknown)
-//     colorInput = colorInput.toLowerCase();
-//
-//     if (colorInput === "red"){
-//         console.log("Strawberries are red")
-//     } else if (colorInput === "blue"){
-//         console.log("Blue is the color of the sky");
-//     } else if (colorInput === "orange"){
-//         console.log("Orange is the color of the horizon during a sunset");
-//     } else if (colorInput === "yellow"){
-//         console.log("Yellow like canaries and lemons");
-//     } else if (colorInput === "green"){
-//         console.log("Green like algae in a pond");
-//     } else if (colorInput === "indigo"){
-//         console.log("I don't really know what's indigo but it is a color");
-//     } else if (colorInput === "Violet ") {
-//         console.log("Violet like African Violets");
-//     } else if (colorInput === "Black"){
-//         console.log("Black like an onyx. Although black is the absorption of all colors");
-//     } else if (colorInput === "White"){
-//         console.log("White like the clouds on a sunny day");
-//     } else (`Hmmmm....I didn't think of that ${colorInput}! How cool!`);
-// }
-// analyzeColor("red");
-// analyzeColor("blue");
-// analyzeColor("orange");
-// analyzeColor("yellow");
-// analyzeColor("green");
-// analyzeColor("indigo");
-// analyzeColor("violet");
-// analyzeColor("black");
-// analyzeColor("white");
-// analyzeColor("randomColor");
+function analyzeColor(colorInput) { //the parameter is colorInput; used to take in dynamic input (aka the unknown)
+    colorInput = colorInput.toLowerCase();
+
+    if (colorInput === "red"){
+        console.log("Strawberries are red")
+    } else if (colorInput === "blue"){
+        console.log("Blue is the color of the sky");
+    } else if (colorInput === "orange"){
+        console.log("Orange is the color of the horizon during a sunset");
+    } else if (colorInput === "yellow"){
+        console.log("Yellow like canaries and lemons");
+    } else if (colorInput === "green"){
+        console.log("Green like algae in a pond");
+    } else if (colorInput === "indigo"){
+        console.log("I don't really know what's indigo but it is a color");
+    } else if (colorInput === "Violet ") {
+        console.log("Violet like African Violets");
+    } else if (colorInput === "Black"){
+        console.log("Black like an onyx. Although black is the absorption of all colors");
+    } else if (colorInput === "White"){
+        console.log("White like the clouds on a sunny day");
+    } else (`Hmmmm....I didn't think of that ${colorInput}! How cool!`);
+}
+analyzeColor("red");
+analyzeColor("blue");
+analyzeColor("orange");
+analyzeColor("yellow");
+analyzeColor("green");
+analyzeColor("indigo");
+analyzeColor("violet");
+analyzeColor("black");
+analyzeColor("white");
+analyzeColor("randomColor");
 // //END OF THIS ACTIVITY
 // // // Don't change the next two lines!
 // // // These lines create two variables for you:
@@ -122,8 +130,8 @@ const analyzeColor = colorInput => {
 //  * Prompt the user for a color when the page loads, and pass the input from the
 //  * user to your `analyzeColor` function. Alert the return value from your
 //  * function to show it to the user.
-//  */
-//
+//  */ SEE ABOVE (NEED TO CORRECT)
+
 // /* ########################################################################## */
 //
 // /**
@@ -136,7 +144,8 @@ const analyzeColor = colorInput => {
 //  *
 //  * Write a function named `calculateTotal` which accepts a lucky number and total
 //  * amount, and returns the discounted price.
-//  *
+function calculateTotal(luckyNumber, totalAmt, discountedPrice)
+
 //  * Example:
 //  * calculateTotal(0, 100) // returns 100
 //  * calculateTotal(4, 100) // returns 50

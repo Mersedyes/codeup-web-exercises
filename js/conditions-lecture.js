@@ -53,3 +53,5 @@ switch (todaysWeather) {
         console.log("go play in the sun");
         break;
 }
+todaysWeather("hailing");
+todaysWeather("raining");
