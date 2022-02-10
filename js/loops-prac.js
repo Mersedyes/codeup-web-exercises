@@ -33,7 +33,7 @@
 
 
 // TODO: using prompt() and alert(), write a while loop that will continue to ask for the correct password until the
-// //  correct password is given.
+//  correct password is given.
 // let password = "passwOrd123";
 // let isCorrect = false;
 // let attempt = "";
