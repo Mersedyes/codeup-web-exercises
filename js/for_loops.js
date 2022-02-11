@@ -27,21 +27,22 @@
 // }
 //
 // //Part Three - Exercise 4 create a for loop that uses console.log to create the output shown
-// function treeOfNumbers(height) { // created a function
-//     for (var t = 1; t <= height; t++){ // initialization of loop and condition
-//         let tree = t; //assign variable
-//         let space = '' + i;
-//
-//         for (var h = 1; h <= t; h++){
-//             tree = i.toString();
-//         }
-//
-//         let gap = space.repeat(height + 1 - i);
-//         tree = tree + gap;
-//         console.log(tree);
-//     }
-// }
-// treeOfNumbers(9);
+function treeOfNumbers(height) { // created a function
+    for (var t = 1; t <= height; t++){
+        // initialization of loop and condition
+        let tree = t += ''; //assign variable
+        // let space = '' + i; don't need this
+
+        for (var h = 1; h <= t; h++){
+            tree = i.toString();
+        }
+
+        //let gap = space.repeat( i - 1);
+        // tree = tree + gap; don't need this
+        console.log(tree);
+    }
+}
+treeOfNumbers(9);
 
 // Part Four - create a for loop that uses console.log to create the output shown
 // function minusFive() {
