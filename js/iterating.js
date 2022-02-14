@@ -107,15 +107,15 @@
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
-for (let i = 0; i < names.length; i++){
-    console.log(names[i]);
-}
+    for (let i = 0; i < names.length; i++) {
+        console.log(names[i]);
+    }
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
 
-    names.forEach(function (names){
+    names.forEach(function (names) {
         console.log("Here is the person representing: " + names);
     });
     // expected output: "Mersedyes"
@@ -137,21 +137,28 @@ for (let i = 0; i < names.length; i++){
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
+        //Translation of instructions
+        // write a function called first that has 1 array parameter and returns
+        // the element
+        // when getting what a customer wants, you may need to translate immediate into code
+        // these function return something (not print or output)
     let arrayOfNumbers = [1, 2, 3, 4, 5];
 
-    function first(inArray){
-       // console.log("Function returns the first element: " + inArray[0]);
+    function first(inArray) {
+        // console.log("Function returns the first element: " + inArray[0]);
         return inArray[0];
     }
 
-    function second(inArray){
+    function second(inArray) {
         //console.log("Function returns the second element: " + inArray[1]);
         return inArray[1];
     }
-    function last(inArray){
+
+    function last(inArray) {
         //console.log("Function returns the last element: " + inArray[inArray.length - 1]);
         return inArray[inArray.length - 1];
     }
+
     console.log(first(arrayOfNumbers));
     console.log(second(arrayOfNumbers));
     console.log(last(arrayOfNumbers));
