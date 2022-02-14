@@ -27,6 +27,23 @@
      * string, and <li> tags around each planet.
      */
     planetsString = planetsArray.join('<br>'); // this is a line break that would move each planet to the next line
-    console.log(planetsString)
+    console.log(planetsString);
     //this is useful in injecting into arrays
+
+    //BONUS Exercise
+    function buildPlanetUl(arrOfPlanets) {
+        let newString = '<ul>';
+
+        //build it up programmatically
+        //loop thorugh the array
+        for (let i =0; i < arrOfPlanets.length; i++) {
+            newString += '<li>';
+            newString += arrOfPlanets[i];
+            newString += '</li';
+        }
+        newString += '<ul>';
+        return newString;
+    }
+
+    console.log(buildPlanetUl(planetsArray));
 })();
