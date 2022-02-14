@@ -1,19 +1,20 @@
 "use strict";
 
-(function(){
+(function () {
     "use strict";
 
     var planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
-    var planetsArray;
+    var planetsArray = planetsString.split('|')
 
     /**
      * TODO:
      * Convert planetsString to an array, and save it in a variable named
      * planetsArray.
      * console.log planetsArray to check your work
+     * SEE ABOVE FOR LINE 7 AS COMPLETED
      */
 
-    // console.log(planetsArray);
+    console.log(planetsArray);
 
     /**
      * TODO:
@@ -25,5 +26,7 @@
      * list. You will need an opening AND closing <ul> tags around the entire
      * string, and <li> tags around each planet.
      */
-
+    planetsString = planetsArray.join('<br>'); // this is a line break that would move each planet to the next line
+    console.log(planetsString)
+    //this is useful in injecting into arrays
 })();
