@@ -77,7 +77,7 @@ elixirCohort.printAllStudentNames = function (){
 }
  END OF NOTES*/
 
-(function() {
+(function () {
     "use strict";
 
     /**
@@ -91,11 +91,11 @@ elixirCohort.printAllStudentNames = function (){
      *  > console.log(person.lastName) // "Sanchez"
      */
 
-var person = {}; // when we start an object start this way
-person.firstName = 'Mersedyes'; // string literal
-person.lastName = 'Livingston';
-console.log(person.firstName); // how you access the properties
-console.log(person.lastName);
+// var person = {}; // when we start an object start this way
+// person.firstName = 'Mersedyes'; // string literal
+// person.lastName = 'Livingston';
+// console.log(person.firstName); // how you access the properties
+// console.log(person.lastName);
 
 
     /**
@@ -108,10 +108,10 @@ console.log(person.lastName);
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-person.sayHello = function () {
-    console.log("Hello from " + person.firstName + " " + person.lastName)
-}
-person.sayHello();
+// person.sayHello = function () {
+//     console.log("Hello from " + person.firstName + " " + person.lastName)
+// }
+// person.sayHello();
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -127,11 +127,40 @@ person.sayHello();
      * and console.log the relevant messages for each person
      */
 
+    /* STEPS
+    1. if shopper spends more than $200, they get 12%
+    2. JS program, using conditionals, that logs to the browser to know what each
+    shopper spend.
+    3. output: display a line with the name of the person, the amount before the discount,
+    the discount and the amount after the discount
+    MAKE SURE TO INCLUDE FORLOOP TO ITERATE THORUGH THE ARRAY
+    4. console.log the reference message
+
+     */
+    //put each shopper as their own object
     // var shoppers = [
     //     {name: 'Cameron', amount: 180},
     //     {name: 'Ryan', amount: 250},
     //     {name: 'George', amount: 320}
     // ];
+    //
+    // let shoppersDiscountCalc = function () {
+    //     let discount = 0.88; // determined the 12% discount; decided to use .88 instead due to ease of math
+    //     let discountedPrice;
+    //
+    //     shoppers.forEach(function (person) {
+    //         if (person.amount > 200) { // using dot notation to look at shopper to call out the value of the amount
+    //             discountedPrice = person.amount * discount; // should return discounted price
+    //             console.log("Hey " + person.name + "! ");
+    //             console.log("You total before discount is: $" + person.amount);
+    //             console.log("Your total after the discount is: $" + discountedPrice);
+    //         } else {
+    //             console.log("Hey " + person.name + "! You total amount is: $" + person.amount);
+    //         }
+    //     })
+    // }
+    // console.log(shoppersDiscountCalc())
+    //need to access the array using a loop
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -145,6 +174,18 @@ person.sayHello();
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+var books = [
+        {title: 'The Salmon of Doubt', author: {firstName: 'Douglas', lastName: 'Adams'}},
+        {title: 'Pride and Prejudice', author: {firstName: 'Jane', lastName: 'Austen'}},
+        {title: 'To Kill A Mockingbird', author: {firstName: 'Harper', lastName: 'Lee'}},
+        {title: 'Brave New World', author: {firstName: 'Aldous', lastName: 'Huxley'}},
+        {title: 'I Capture the Castle', author: {firstName: 'Dodie', lastName: 'Smith'}}
+    ];
+    console.log(books);
+    console.log(books[0].title); // used dot notation to narrow down
+    console.log(books[1].author.firstName);
+    console.log(books[2].author.lastName);
 
     /**
      * TODO:
@@ -171,6 +212,16 @@ person.sayHello();
      *      ...
      */
 
+    function bookInfo(title, firstName, lastName){
+        books.forEach(function (book, index){
+            console.log('Book # ' + (index + 1));
+            console.log('Title: ' + book.title);
+            console.log('Author: ' + book.author.firstName + ' ' + book.author.lastName);
+        })
+    }
+
+    bookInfo();
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -182,4 +233,17 @@ person.sayHello();
      *   `showBookInfo` function.
      */
 
+    function createBook (title, firstName, lastName){
+        //title, author firstName and lastName
+        books.push({
+            title: title,
+            author:{ // starts with the curly brackets bc it is an object within and object
+                firstName: firstName,
+                lastName: lastName
+            }})
+    }
+    createBook('Frankin Stein', 'Mary', 'Shelly');
+    console.log(books);
+
+    bookInfo();
 })();
