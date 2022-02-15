@@ -90,14 +90,22 @@
 //      *  > console.log(person.firstName) // "Rick"
 //      *  > console.log(person.lastName) // "Sanchez"
 //      */
-//
+
+//Ry's work out on how to create an object
+let person = {
+    firstName: 'Mersedyes',
+    lastName: 'Livingston'
+}
+
+console.log(person.firstName);
+console.log(person.lastName);
 // // var person = {}; // when we start an object start this way
 // // person.firstName = 'Mersedyes'; // string literal
 // // person.lastName = 'Livingston';
 // // console.log(person.firstName); // how you access the properties
 // // console.log(person.lastName);
 //
-//
+// methods are functions that belong to an object
 //     /**
 //      * TODO:
 //      * Add a sayHello method (this means function; a method is a function that belongs to an object
@@ -112,7 +120,19 @@
 // //     console.log("Hello from " + person.firstName + " " + person.lastName)
 // // }
 // // person.sayHello();
-//
+
+
+// RY'S WORKOUT; ACCESS THE PROPERTIES
+person.sayHello = function () {
+    console.log('Hello from ' + person.firstName + ' ' + person.lastName); //would print the message that says hello with the person's name
+    //COULD ALSO DO THIS METHOD
+    return 'Hello from ' + this.firstName + ' ' + this.lastName
+}
+//when accessing the object (person) then you have access to it outside of the function
+person.sayHello(); // have parenthesis to take in arguments
+//How to refactor the above
+
+
 //     /** TODO:
 //      * HEB has an offer for the shoppers that buy products amounting to
 //      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -187,36 +207,37 @@
 //     console.log(books[1].author.firstName);
 //     console.log(books[2].author.lastName);
 
-    /**
-     * TODO:
-     * Loop through the books array and output the following information about
-     * each book:
-     * - the book number (use the index of the book in the array)
-     * - the book title
-     * - author's full name (first name + last name)
-     *
-     * Example Console Output:
-     *
-     *      Book # 1
-     *      Title: The Salmon of Doubt
-     *      Author: Douglas Adams
-     *      ---
-     *      Book # 2
-     *      Title: Walkaway
-     *      Author: Cory Doctorow
-     *      ---
-     *      Book # 3
-     *      Title: A Brief History of Time
-     *      Author: Stephen Hawking
-     *      ---
-     *      ...
-     */
-//
+/**
+ * TODO:
+ * Loop through the books array and output the following information about
+ * each book:
+ * - the book number (use the index of the book in the array)
+ * - the book title
+ * - author's full name (first name + last name)
+ *
+ * Example Console Output:
+ *
+ *      Book # 1
+ *      Title: The Salmon of Doubt
+ *      Author: Douglas Adams
+ *      ---
+ *      Book # 2
+ *      Title: Walkaway
+ *      Author: Cory Doctorow
+ *      ---
+ *      Book # 3
+ *      Title: A Brief History of Time
+ *      Author: Stephen Hawking
+ *      ---
+ *      ...
+ */
+//      console.log('---')
 //     function bookInfo(title, firstName, lastName){
 //         books.forEach(function (book, index){
-//             console.log('Book # ' + (index + 1));
-//             console.log('Title: ' + book.title);
+//             console.log('Book # ' + (index + 1)); // not user friendly to do books starting at 0; isolate the math then concatonate
+//             console.log('Title: ' + book.title); //how I access the title using dot method
 //             console.log('Author: ' + book.author.firstName + ' ' + book.author.lastName);
+//               console.log('---')
 //         })
 //     }
 //
@@ -246,4 +267,21 @@
 //     console.log(books);
 //
 //     bookInfo();
+
+//RY'S BREAKDOWN OF THE BONUS
+// function createBook(title, authorName) {
+//     let authorNameSplit = authorName.split(' ');
+//     return {
+//         title: title,
+//         author: {
+//             firstName: authorNameSplit[0]
+//             lastName: authorNameSplit[1]
+//         }
+//     }
+// }
+// addBook(createBook('Clean Code', 'Bob Martin'));
+// function addBook(book){
+//     books.push(book);
+// }
+
 // })();
