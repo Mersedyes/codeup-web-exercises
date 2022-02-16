@@ -283,5 +283,11 @@ person.sayHello(); // have parenthesis to take in arguments
 // function addBook(book){
 //     books.push(book);
 // }
-
+// function showBookInfo(book) {
+//     console.log('Title: ' + book.title); //how I access the title using dot method
+//     console.log('Author: ' + book.author.firstName + ' ' + book.author.lastName);
+//     console.log('---')
+// }
+//
+// printAllBooks(books);
 // })();
