@@ -48,55 +48,55 @@ Create an object representing a person. It should have properties representing:
     occupation
 Hard code some values in that object, then log it and its properties to the console*/
 
-var person = {
-    name: ["Mersedyes", "D", "Livingston"],
-    dob: new Date(1988, 7, 22),//"July 22",
-    occupation: "student"
-};
-console.log("The name of this person is: " + person.name);
-console.log("The date of birth for this human is: " + person.dob);
-console.log("The occupation of this human is: " + person.occupation);
-
-//What if we wanted to add another object with the same properties id?
-let person2 = Object.create(person); //Object
-person2["names"] = ["Ry", "Sutton"];
-person2["occupation"] = "Father of the year";
-person2.dob = "01.01.1992";
-console.log(person2);
-
-/* CHALLENGE #2 FOR WARM-UP
-JS Object Warmup, pt 2:
-Create an object representing a person’s contact info. It should have:
-    phone number
-    street address
-    state
-    postal code
-    email address
-Hard code some values in that object, then log it and its properties to the console
- */
-//this is the constructor function
-function contactInfo(phone, address, city, state, postal, email){
-    //this is called object mapping
-    this.phone = phone;
-    this.address = address;
-    this.city = city;
-    this.state = state;
-    this.postal = postal;
-    this.email = email;
-    //console log inside of constructor function is allowed
-    console.log(typeof this); // output is object
-}
-const contactDetail = new contactInfo('2104397938', '13806 Quiet Fox Ln', 'San Antonio','TX', '78245', 'mersedyes.livingston@gmail.com');
-// var contactInfo = {
-//     phoneNum: '210.439.7938',
-//     address: '13806 Quiet Fox Ln',
-//     state: 'Texas is a country',
-//     postal: '78245',
-//     email: "mersedyes.livingston@gmail.com"
+// var person = {
+//     name: ["Mersedyes", "D", "Livingston"],
+//     dob: new Date(1988, 7, 22),//"July 22",
+//     occupation: "student"
 // };
-console.log(contactDetail.phone);
-console.log(contactDetail.address);
-console.log(contactDetail.city + ", " + contactDetail.state + " " + contactDetail.postal)
+// console.log("The name of this person is: " + person.name);
+// console.log("The date of birth for this human is: " + person.dob);
+// console.log("The occupation of this human is: " + person.occupation);
+//
+// //What if we wanted to add another object with the same properties id?
+// let person2 = Object.create(person); //Object
+// person2["names"] = ["Ry", "Sutton"];
+// person2["occupation"] = "Father of the year";
+// person2.dob = "01.01.1992";
+// console.log(person2);
+//
+// /* CHALLENGE #2 FOR WARM-UP
+// JS Object Warmup, pt 2:
+// Create an object representing a person’s contact info. It should have:
+//     phone number
+//     street address
+//     state
+//     postal code
+//     email address
+// Hard code some values in that object, then log it and its properties to the console
+//  */
+// //this is the constructor function
+// function contactInfo(phone, address, city, state, postal, email){
+//     //this is called object mapping
+//     this.phone = phone;
+//     this.address = address;
+//     this.city = city;
+//     this.state = state;
+//     this.postal = postal;
+//     this.email = email;
+//     //console log inside of constructor function is allowed
+//     console.log(typeof this); // output is object
+// }
+// const contactDetail = new contactInfo('2104397938', '13806 Quiet Fox Ln', 'San Antonio','TX', '78245', 'mersedyes.livingston@gmail.com');
+// // var contactInfo = {
+// //     phoneNum: '210.439.7938',
+// //     address: '13806 Quiet Fox Ln',
+// //     state: 'Texas is a country',
+// //     postal: '78245',
+// //     email: "mersedyes.livingston@gmail.com"
+// // };
+// console.log(contactDetail.phone);
+// console.log(contactDetail.address);
+// console.log(contactDetail.city + ", " + contactDetail.state + " " + contactDetail.postal)
 
 /*CHALLENGE #3 ACCEPTED
 * JS Object Warmup, pt 3:
@@ -136,3 +136,34 @@ Create a property on the person object to store their contact info
 //
 // console.log(person2.contactInfo.emailAddress);
 
+/*
+* JS Object Warmup, pt 4:
+We are going to create a method which
+    - allows a user to input their desired amount of names names
+        *use prompt, alert, confirm inside of a while loop
+        *assign each name to an array
+    -once the user decides they are done giving names, end the loop and
+   return the string array
+    -then assigning that returned array by invoking your new function on the
+   Person.names property value!
+
+* Things to consider:
+    -Should this be a standalone function or should it be a method on the Person
+* object?*/
+
+// function getNames(){
+//     let namesArr = [];
+//     let hasMoreNames = true;
+//     while (hasMoreNames){
+//         // get the names
+//         namesArr.push(prompt("Please enter "))
+//         // prompt for names
+//
+//         hasMoreNames = confirm("Would you like to enter another name?")
+//     }
+//     return namesArr;
+// };
+// this.names();
+// this.occupation = occupation;
+// this.dob = dob;
+// this.
