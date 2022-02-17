@@ -1,0 +1,96 @@
+<!-- NOTES FOR HTML FORMS
+HTTP Methods (GET, POST, PUT, DELETE)
+GET - use the data in the form to get me something back
+POST - I need to make NEW data! You can use this to update or delete
+PUT - updates existing data
+DELETE - delete existing data
+
+each of these methods have their own conditions and structures in how they are
+built. GET and POST are the ones we will focus on
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register With Us</title>
+    <style>
+        h1, h2, h3, h4, h5, h6{
+            color: black;
+            text-decoration: white;
+        }
+        body {
+            background: white;
+            font-family: "Apple Symbols";
+            background-image: url("img/white_background.jpeg");
+            background-repeat: round;
+            background-size: 2000px 1200px;
+        }
+    </style>
+</head>
+<body>
+<marquee><h1>Welcome to Veridian Dynamics</h1></marquee>
+<hr>
+
+<form method="post" action="https://request-inspector.glitch.me/">
+
+    <div>
+        <label for="email-input">Email</label>
+        <input type="email-input" type="email" placeholder="Enter email">
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="Enter password">
+    </div>
+    <br>
+    <label for="email_body">Bio</label>
+    <textarea id="email_body" name="email_body">Tell us about yourself</textarea>
+    <br>
+    <!--<div>
+        <p>How did you hear about us?</p>
+        <label>
+            <input type="radio" name="q1" value="Billboard">
+            Billboard
+        </label>
+        <label>
+            <input type="radio" name="q1" value="Radio Advertisement">
+            Radio Advertisement
+        </label>
+        <label>
+            <input type="radio" name="q1" value="Internet Advertisement">
+            Internet Advertisement
+        </label>
+        <label>
+            <input type="radio" name="q1" value="Other">
+            Other
+        </label>
+    </div>
+    -->
+    <div>
+        <p>How did you hear about us?</p>
+        <label><input type="checkbox" id="os1" name="os[]" value="Billboard"> Billboard</label>
+        <label><input type="checkbox" id="os2" name="os[]" value="Radio Advertisement"> Radio Advertisement</label>
+        <label><input type="checkbox" id="os3" name="os[]" value="Internet Advertisement"> Internet Advertisement</label>
+        <label><input type="checkbox" id="os1" name="os[]" value="Other"> Other</label>
+    </div>
+    <br>
+    <div>
+        <label for="browser">Select your browser: </label>
+        <select id="browser" name="browser">
+            <option value="1">Mozilla Firefox</option>
+            <option value="2">Safari</option>
+            <option value="2">Microsoft Edge</option>
+            <option value="2">Google Chrome</option>
+            <option value="2">Opera</option>
+            <option value="2">Brave</option>
+            <option value="2">Vivaldi</option>
+            <option value="2">DuckDuckGo</option>
+            <option value="2">Other</option>
+        </select>
+    </div>
+    <input type="submit">
+</form>
+</body>
+</html>
+
+
