@@ -35,7 +35,11 @@ body, html {
     background-color: darkred;
 }
 
-:root {
-    --first-color: #16f;
-    --second-color: #ff7;
+button {
+    margin: 0 auto;
+    display: block;
+    color: white;
+    background-color: coral;
+    cursor: pointer;
+    transition: all 600ms ease-in-out;
 }
