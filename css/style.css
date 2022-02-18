@@ -3,10 +3,14 @@
     text-decoration: underline;
 }
 body {
-    background-color: powderblue;
+    background-image: url("../img/paper-texture_background.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
 }
 h1 {
     color: blue;
+    text-align: center;
 }
 p {
     color: red;
