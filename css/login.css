@@ -13,6 +13,8 @@ body, html {
 form {
     /* This form should be separated from other elements by 1em */
     /* There must be 1em between the content and the border of this element */
+    margin: 1em;
+    padding: 1em;
 }
 
 fieldset {
@@ -20,8 +22,11 @@ fieldset {
     -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
     box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
     /* There must be 1em between the content and the border of this element */
+    padding: 1em;
     /* It should have no border */
+    border: none;
     /* Its background should be white */
+    background: white;
 }
 
 .width-80 {
