@@ -167,3 +167,24 @@ We are going to create a method which
 // this.occupation = occupation;
 // this.dob = dob;
 // this.
+
+//WARM-UP Create a function which returns true if the given argument
+// is a number, false if it is not a number
+alert(prompt("Please provide a number."))
+
+// function isANumber(input) {
+//     if (input != NaN) {
+//         return true;
+//         console.log(prompt("Good job, " + input + " is a number!"))
+//     } else prompt("This is not a number, try again.");
+// }
+// console.log(isANumber())
+
+function isANumber(maybeANum){
+    return !isNaN(maybeANum);
+}
+//string
+console.log(isANumber("zebra"));
+
+// numeric string
+console.log(isANumber("12"));
