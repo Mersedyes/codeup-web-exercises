@@ -46,6 +46,7 @@ body {
     border-radius: 0;
     outline: 0;
     -webkit-appearance: none;
+    margin: auto;
 }
 
 .btn-primary {
@@ -60,4 +61,5 @@ body {
         Add an explicit size for items along the main axis of 15em.
         Read more about Flex Basis: https://java.codeup.com/appendix/further-reading/html-css/flexbox-additional-concepts/#flex-basis */
     flex-basis: 15em;
+
 }
