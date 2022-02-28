@@ -170,7 +170,7 @@ We are going to create a method which
 
 //WARM-UP Create a function which returns true if the given argument
 // is a number, false if it is not a number
-alert(prompt("Please provide a number."))
+// alert(prompt("Please provide a number."))
 
 // function isANumber(input) {
 //     if (input != NaN) {
@@ -180,11 +180,41 @@ alert(prompt("Please provide a number."))
 // }
 // console.log(isANumber())
 
-function isANumber(maybeANum){
-    return !isNaN(maybeANum);
-}
-//string
-console.log(isANumber("zebra"));
+// function isANumber(maybeANum){
+//     return !isNaN(maybeANum);
+// }
+// //string
+// console.log(isANumber("zebra"));
+//
+// // numeric string
+// console.log(isANumber("12"));
 
-// numeric string
-console.log(isANumber("12"));
+/*WARM-UP CHALLENGE 2.28.21
+*Warmup: Write a function called removeAll that takes two parameters. One that represents an array
+* and another that represents a value to be removed from that array. When called this function should
+* return an array with all the values of the original array except the specified value to be removed. */
+
+var anArray = ['a', 'b']; // called out variable
+function removeAll (anArray, item){ // created a function for the purpose of using pop() method
+    for (var i = 0; i < item; i++){
+        arr.pop();
+    }
+}
+console.log(removeAll(anArray, 'b')); // should print 'a'
+
+//Ry solution
+// function removeAll(anArr, valueToRemove){
+//     let filteredArr = [];
+//     anArr.forEach(function (ele){
+//         if (valueToRemove !== ele){
+//             filteredArr.push(ele);
+//         }
+//     }); return filteredArr
+// }
+//
+// for (let i=0; i < anArray.length; i++){
+//     if (valueToRemove === anArray[i]) {
+//         continue;
+//     }
+//     filteredArr.push(anArray[i]);
+// }
