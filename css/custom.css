@@ -18,3 +18,7 @@ a, i {
     text-align: center;
     margin: 0 auto;
 }
+
+#btn{
+    align-items: flex-end;
+}
