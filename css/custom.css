@@ -1,0 +1,20 @@
+a, i {
+    color: #111111;
+}
+
+.div.container {
+    padding: 0;
+}
+
+.jumbotron {
+    background-image: url("https://java.codeup.com/examples/bootstrap/pizza.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+}
+
+.h1 {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
