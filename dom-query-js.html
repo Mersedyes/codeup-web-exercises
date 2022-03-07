@@ -5,6 +5,10 @@
     <title>DOM: Query and Modify</title>
 </head>
 <body>
+<button id="btn1"> CHANGE MAIN HEADER</button>
+<button id="btn2"> CHANGE SUB-HEADER COLOR</button>
+<button id="btn3"> CHANGE UL</button>
+<button id="btn4"> MISSION ACCOMPLISHED</button>
 
 <h1 id="main-header">Hello World!</h1>
 <ul>
@@ -62,6 +66,36 @@
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
         subParagraph[0].innerText = "Mission Accomplished";
         console.log(subParagraph.innerText);
+
+        var listener = function (){
+            mainHeader.innerHTML = "JavaScript is Cool";
+        };
+
+        var firstBtn = document.getElementById('btn1');
+        firstBtn.addEventListener('click', listener);
+
+        var changeSubHeaderColor = function () {
+            subHeader.style.color = "#0000FF"
+        };
+
+        var secondBtn = document.getElementById('btn2');
+        secondBtn.addEventListener('click', changeSubHeaderColor);
+
+         var liChange = function (){
+             for (var i = 0; i <listItems.length; i +=2){
+                 listItems[i].style.color = '#808080';
+             }
+         };
+
+         var thirdBtn = document.getElementById('btn3');
+         thirdBtn.addEventListener('click', liChange);
+
+         var missionAccomplished = function (){
+             subParagraph.innerHTML = 'Mission Accomplished';
+         };
+
+        var fourthBtn = document.getElementById('btn4');
+        fourthBtn.addEventListener('click', missionAccomplished);
     })();
 </script>
 </body>
