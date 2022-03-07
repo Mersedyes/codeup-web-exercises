@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Pets</title>
 </head>
 <body>
+<div class="container">
+    <h1 style="text-align: center; color: darkmagenta;">PETS</h1>
+    <ul class="pets" id="pets">
+    </ul>
+    <script>
+        let pets = ["mastiff", "poodle", "huskey", "chili dog"];
 
+        let petList = document.getElementById("pets");
+
+        for (let i=0; i <pets.length; i++){
+            let li = document.createElement("li");
+
+            /*add pet text to each li*/
+            li.innerText = pets[i];
+
+            /*add each li to ul*/
+            petList.appendChild(li);
+        }
+    </script>
+</div>
 </body>
 </html>
