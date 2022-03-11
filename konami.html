@@ -38,26 +38,72 @@
 
 
   //when key is pressed need to push it into an array; stored in an array
-  const keyPressed = [];
-  const secretCode = 'keysix';
+  //mapped the konami code or human with numerical understanding
+  let keys = {
+      37: "left",
+      38: "up",
+      39: "right",
+      40: "down",
+      65: "a",
+      66: "b"
+  };
 
-  //tells me the name of the key pressed
-  window.addEventListener('keyup', (e) => {
-    console.log(e.key);
-    keyPressed.push(e.key);
-    keyPressed.splice(-secretCode.length -1, keyPressed.length - secretCode.length);
-    if (keyPressed.join().includes(secretCode)){
-      console.log('AW YEAH, YOU GOT IT!!!')
-      //where the magic happens
+  //define what the konami code looks like
+  let konamiCode = ["up", "up", "down", "down", "left", "right", "left", "right", "b", "a"];
+
+  document.addEventListener("keydown", checkCode, false);
+
+  let keyCount = 0;
+  //need to let the keycode time out
+  let timerID;
+
+  function checkCode(event){
+      console.log(event.keyCode);
+      //detect keys being pressed
+      let keyPressed = keys[event.keyCode];
+
+      if (keyPressed === konamiCode[keyCount]){
+          keyCount++;
+
+          window.clearTimeout(timerID);
+
+          timerID = window.setTimeout(resetKeyState, 2000);
+          //how many times has the keys been pressed to know where we are in the code
+          if (keyCount === konamiCode.length){
+              cheatCodeActivated();
+              resetKeyState();
+          }
+      } else {
+          resetKeyState();
+          alert("RED ALERT! RED ALERT!");
+      }
+  }
+    function cheatCodeActivated(){
+      alert("CHEAT CODE ACTIVATED!");
     }
-    console.log(keyPressed);
-  });
 
+    function resetKeyState() {
+      console.log("Resetting state!");
+      keyCount = 0;
+      window.clearTimeout(timerID);
 
-
-  // $(document).keyup(function(event){
-  //   console.log(event.keyCode);
+    }
+  //this method below did not work but was cool to try, need to figure out what I was missing
+  // const keyPressed = [];
+  // const secretCode = 'keysix';
+  //
+  // //tells me the name of the key pressed
+  // window.addEventListener('keyup', (e) => {
+  //   console.log(e.key);
+  //   keyPressed.push(e.key);
+  //   keyPressed.splice(-secretCode.length -1, keyPressed.length - secretCode.length);
+  //   if (keyPressed.join().includes(secretCode)){
+  //     console.log('AW YEAH, YOU GOT IT!!!')
+  //     //where the magic happens
+  //   }
+  //   console.log(keyPressed);
   // });
+
 </script>
 </body>
 </html>
