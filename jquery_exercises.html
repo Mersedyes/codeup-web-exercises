@@ -2,17 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>jQuery Selectors Exercise</title>
 </head>
 <body>
 <div><h1 id="main-header">Hello World!</h1>
-    <ul>
-        <li data-dbid="1">Item 1</li>
-        <li data-dbid="2">Item 2</li>
-        <li data-dbid="3">Item 3</li>
-        <li data-dbid="4">Item 4</li>
-        <li data-dbid="5">Item 5</li>
+    <h1 class="codeup" id="heading"> Did not know libraries could exist without books like jQuery!</h1>
+    <ul class="main-list" id="main-list">
+        <li class="Codeup" id="item">List items</li>
     </ul>
+</div>
+<div>
     <h2 id="sub-header">Hello Again.</h2>
     <p class="sub-paragraph">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -34,11 +33,30 @@
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
         crossorigin="anonymous"></script>
 <script>
+    // $(document).ready(function () {
+    //     alert("Welcome to JQuery Hot Mess!")
+    //     // INSERT JAVASCRIPT CODE SAMPLE HERE
+    // });
 
-    $(document).ready(function () {
-        alert("Welcome to JQuery Hot Mess!")
-        // INSERT JAVASCRIPT CODE SAMPLE HERE
+    $(document).ready(function (){
+        $('li').css('font-size', '20px');
+        $('p,li,h1').css('background-color', '#FFFF00');
+        alert($'h1').html());
+    })
 
-    });</script>
+    $('h1').click(function (){
+        $(this).css('background-color', 'red');
+    });
+
+    $('p').ondblclick(function (){
+        $(this).css('font-size'. '18px');
+    });
+
+    var handlerIn = function (){
+        $(this).css('color', 'red');
+    };
+
+    var handlerOut = function ()
+</script>
 </body>
 </html>
