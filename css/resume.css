@@ -1,0 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+/* screen sizes between 960px and 1200px */
+@media screen and (min-width:960px) and (max-width:1200px) {
+    /* ... */
+}

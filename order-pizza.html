@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Welcome to Pizza World!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+          integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ca8971332a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+<!-- nav bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Pizza World</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Order Online <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Menu</a>
+            </li>
+            <li>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Zip Code" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search stores near you!</button>
+                </form>
+            </li>
+        </ul>
+        <a href="#"><i class="fa-solid fa-user"></i> Sign up</a>
+    </div>
+</nav>
+<!--jumbotron -->
+<div class="container-fluid">
+    <div class="jumbotron jumbotron-fluid mt-5 d-none d-sm-block">
+        <div class="container">
+            <h1 class="display-4">Welcome to Pizza World!</h1>
+        </div>
+    </div>
+    <!--nav tabs -->
+    <h2>Build your own pizza!</h2>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+               aria-selected="true"><h6><span class="badge badge-dark">1</span> Size and crust</h6></a>
+        </li>
+        <li class="nav-item" role="tab">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+               aria-selected="false"><h6><span class="badge badge-dark">2</span> Cheese and Sauce</h6></a>
+        </li>
+        <li class="nav-item" role="tab">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+               aria-selected="false"><h6><span class="badge badge-dark">3</span> Toppings</h6> </a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"></div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"></div>
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"></div>
+    </div>
+</div>
+
+<!--add a card -->
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="size-and-crust" role="tabpanel" aria-labelledby="size-and-crust-tab">
+
+
+        <div class="card">
+            <div class="card-header">
+                <h6>Choose Size and Crust</h6>
+            </div>
+<!-- tab one/card one -->
+<div class="tab-pane fade active show p-3" id="hand-tossed-size" role="tabpanel"
+     aria-labelledby="nav-home-tab">
+
+    <div class="card position-static input-group mb-3" style="width: 100%">
+        <div class="card-header">
+            Hand Tossed
+        </div>
+        <ul class="list-group list-group-flush">
+            <!--                        <input type="checkbox">-->
+            <li class="list-group-item">Garlic seasoned crust, with a rich buttery taste.</li>
+            <li class="list-group-item"><input type="radio"> Small (10")</li>
+            <li class="list-group-item"><input type="radio"> Medium (12")</li>
+        </ul>
+    </div>
+</div>
+<!-- tab one/card two -->
+            <div class="tab-pane fade active show p-3" id="crispy-thin-size" role="tabpanel"
+                 aria-labelledby="nav-home-tab">
+                <div class=" card position-static" style="width: 100%">
+                    <div class="card-header">
+                        Crispy Thin
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
+                        <li class="list-group-item"><input type="radio"> Medium (12")</li>
+                        <li class="list-group-item"><input type="radio"> Large (14")</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- button justified to the right end -->
+            <div class="card-footer d-flex justify-content-end">
+                <a href="#" class="btn btn-primary btn-sm">Next Step ></a>
+            </div>
+
+<!--part 2 -->
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="cheese-and-sauce" role="tabpanel" aria-labelledby="cheese-and-sauce">
+            <div class="card">
+                <div class="card-header cardhead1">
+                    Choose Cheese and Sauce
+                </div>
+                <div class="card-body">
+                    <div class="card">
+                        <div class="card-header">
+                            Cheese
+                        </div>
+
+                        <div class="card-body">
+                            <select class="custom-select">
+                                <option selected>Regular</option>
+                                <option value="1">Light</option>
+                                <option value="2">Extra</option>
+                                <option value="3">Double</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card">
+                        <div class="card-header">
+                            Sauce
+                        </div>
+                        <div class="card-body">
+                            <p>What Type?</p>
+                            <select class="custom-select">
+                                <option selected>Robust inspired Tomato Sauce</option>
+                                <option value="1">Marinara Sauce</option>
+                                <option value="2">BBQ sauce</option>
+                                <option value="3">Alfredo Sauce</option>
+                            </select>
+                        </div>
+                        <div class="card-body">
+                            <p>How Much?</p>
+                            <select class="custom-select">
+                                <option selected>Regular</option>
+                                <option value="1">Light</option>
+                                <option value="2">Extra</option>
+                            </select>
+                        </div>
+                        <!-- button justified to the right end -->
+                        <div class="card-footer d-flex justify-content-end">
+                            <a href="#" class="btn btn-primary btn-sm">Next Step ></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--part 3 -->
+
+
+
+                <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+<!-- custom js -->
+</body>
+</html>
