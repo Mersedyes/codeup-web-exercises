@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+  "use strict";
+
+
+  //when key is pressed need to push it into an array; stored in an array
+  const keyPressed = [];
+  const secretCode = 'keysix';
+
+  //tells me the name of the key pressed
+  window.addEventListener('keyup', (e) => {
+    console.log(e.key);
+    keyPressed.push(e.key);
+    keyPressed.splice(-secretCode.length -1, keyPressed.length - secretCode.length);
+    if (keyPressed.join().includes(secretCode)){
+      console.log('AW YEAH, YOU GOT IT!!!')
+      //where the magic happens
+      cornify_add();
+    }
+    console.log(keyPressed);
+  });
+
+
+
+  // $(document).keyup(function(event){
+  //   console.log(event.keyCode);
+  // });
+</script>
+</body>
+</html>
