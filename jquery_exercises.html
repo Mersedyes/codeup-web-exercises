@@ -38,25 +38,30 @@
     //     // INSERT JAVASCRIPT CODE SAMPLE HERE
     // });
 
-    $(document).ready(function (){
-        $('li').css('font-size', '20px');
-        $('p,li,h1').css('background-color', '#FFFF00');
-        alert($'h1').html());
-    })
+    // $(document).ready(function (){
+    //     $('li').css('font-size', '20px');
+    //     $('p,li,h1').css('background-color', '#FFFF00');
+    //     alert($'h1').html());
+    // })
 
     $('h1').click(function (){
         $(this).css('background-color', 'red');
     });
 
-    $('p').ondblclick(function (){
-        $(this).css('font-size'. '18px');
+    $('p').dblclick(function (){
+        $(this).css('font-size', '18px');
     });
 
     var handlerIn = function (){
         $(this).css('color', 'red');
     };
 
-    var handlerOut = function ()
+    var handlerOut = function () {
+        $(this).css('color', 'black');
+    };
+
+    $('li').hover(handlerIn, handlerOut);
+
 </script>
 </body>
 </html>
