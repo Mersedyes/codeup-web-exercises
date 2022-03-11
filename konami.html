@@ -4,7 +4,34 @@
   <title>Konami Code</title>
 </head>
 <body>
-<h1>Konami Code</h1>
+<div id="container">
+  <h1>Konami Code</h1>
+   <p>CLICK HERE TO ENTER THE KONAMI</p>
+
+</div>
+<style>
+  body {
+    background-color: gray;
+    padding: 30px;
+  }
+
+  h1,p {
+    font-family: Sans-serif;
+  }
+
+  h1 {
+    font-size: 75px;
+    color: salmon;
+  }
+
+  p {
+    font-size: 24px;
+    color: darksalmon;
+    cursor: pointer;
+    margin-bottom: 3em;
+  }
+</style>
+
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
   "use strict";
@@ -22,7 +49,6 @@
     if (keyPressed.join().includes(secretCode)){
       console.log('AW YEAH, YOU GOT IT!!!')
       //where the magic happens
-      cornify_add();
     }
     console.log(keyPressed);
   });
