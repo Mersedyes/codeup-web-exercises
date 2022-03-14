@@ -1,20 +1,67 @@
 <!--Used https://www.nps.gov/aboutus/faqs.htm to pull information about national park services-->
-<!--1. Create a new file named jquery_faq.html. Commit all changes to GitHub.-->
+<!--1. Create a new file named jquery_faq.html. Commit all changes to GitHub. DONE-->
 
-<!--2. In a HTML structure, create a definition list containing 10 FAQs about national parks.-->
+<!--2. In a HTML structure, create a definition list containing 10 FAQs about national parks. DONE-->
 
-<!--3. Add a class to all dd elements named invisible.-->
+<!--3. Add a class to all dd elements named invisible. DONE-->
 
 <!--4. Create some CSS rules that sets elements with the invisible class to visibility: hidden;.-->
 
 <!--5. Update the page with jQuery to add a link that toggles the class invisible on and off for all dd elements.-->
+
+<!--Example from MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl-->
+<!--<p>Cryptids of Cornwall:</p>-->
+
+<!--<dl>-->
+<!--    <dt>Beast of Bodmin</dt>-->
+<!--    <dd>A large feline inhabiting Bodmin Moor.</dd>-->
+
+<!--    <dt>Morgawr</dt>-->
+<!--    <dd>A sea serpent.</dd>-->
+
+<!--    <dt>Owlman</dt>-->
+<!--    <dd>A giant owl-like creature.</dd>-->
+<!--</dl>-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>jQuery FAQ Attributes and CSS exercise</title>
-</head>
-<body>
+    <style>
+        .invisible {
+            visibility: hidden;
+        }
 
+    </style>
+</head>
+
+<body>
+<div>
+<p><strong>FAQs About National Parks</strong></p>
+
+<dl>
+    <dt>Who is the director of the National Park Service?</dt>
+    <dd class="invisible">Charles F. "Chuck" Sams III is the Director of the National Park Service.</dd>
+
+    <dt>What government agency oversees the National Park Service?</dt>
+    <dd class="invisible">The National Park Service is a bureau of the Department of the Interior. Directly overseeing
+        its operation is the department's Assistant Secretary for Fish, Wildlife and Parks.</dd>
+
+    <dt>How old is the National Park System?</dt>
+    <dd class="invisible">The National Park Service was created by an act signed by President Woodrow Wilson on August 25, 1916.
+        Yellowstone National Park was established by an act signed by President Ulysses S. Grant on March 1, 1872,
+        as the nation's first national park. View the National Park System timeline.
+    </dd>
+</dl>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+
+
+
+
+</script>
 </body>
 </html>
