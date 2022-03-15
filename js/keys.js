@@ -1,0 +1,1 @@
+const OWM_Key = "6f8469087eee47719da53a754e47ecdb";
