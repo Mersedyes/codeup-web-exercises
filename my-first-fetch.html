@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -8,7 +8,9 @@
 </head>
 <body>
 
-<div id="weather"></div>
+<!--<div id="weather"></div>-->
+<div id="luke"></div>
+<div id="jarjar"></div>
 
 <script src="js/keys.js"></script>
 
@@ -35,6 +37,31 @@
 //find an api
     //work with api that shows three pieces of data - build something with the data
 
+
+    fetch(`https://swapi.dev/api/planets/`)
+        .then(response => response.json())
+        .then(data => { //give access to the api
+            let lukeHome = data.results[0].name;
+            let jarJarHome = data.results[7].name;
+            console.log(data.results[7].name);
+            $('#luke').append(`<p> Luke Skywalker is from ${lukeHome}`);
+            $('#jarjar').append(`<p> JarJar Binks is from ${jarJarHome}`);
+        })
+            //data.results.map((planet)=>{ // get the objects by themselves
+        //         let name = document.createElement("h2");
+        //         name.innerHTML = `${planet.name}`;
+        //         body.appendChild(name)
+        //         let climate = document.createElement("p");
+        //         climate.innerHTML = `${planet.climate}`;
+        //         body.appendChild(climate);
+        //         let terrain = document.createElement("p");
+        //         terrain.innerHTML = `${planet.terrain}`;
+        //         body.appendChild(terrain);
+        //     })
+        //})
+        // .catch(err => {
+        //     console.error(err);
+        // });
 
 </script>
 </body>
