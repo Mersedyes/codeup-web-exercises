@@ -13,51 +13,98 @@ OBJECTIVE: GET THE FIVE DAY WEATHER FORECAST TO DISPLAY, DON'T WORRY ABOUT STYLI
 
 <!--<h1>What is the weather today?</h1>-->
 
-    <div class="container">
-        <div class="current-info"></div>
+<div class="container">
+    <div class="current-info"></div>
 
-        <div class="date-container">
-            <div class="time" id="time">
-                12:30 <span id="am-pm">PM</span>
-            </div>
-            <div class="date" id="date">
-                Monday, 14 March
-            </div>
-
-            <div class="others" id="current-weather-items">
-                <div class="weather-item">
-                    <div>Humidity</div>
-                    <div>43.2%</div>
-                </div>
-                <div class="weather-item">
-                    <div>Pressure</div>
-                    <div>121</div>
-                </div>
-                <div class="weather-item">
-                    <div>Wind Speed</div>
-                    <div>222</div>
-                </div>
-
-            </div>
-
-
+    <div class="date-container">
+        <div class="time" id="time">
+            12:30 <span id="am-pm">PM</span>
         </div>
-        <div class="place-container">
-            <div class="time-zone" id="time-zone">CST</div>
-            <div class="country" id="country">United States</div>
+        <div class="date" id="date">
+            Monday, 14 March
         </div>
 
-        <div class="future-forecast">
-            <div class="today" id="current-temp"></div>
-            <img src="" alt="weather icon" class="w-icon">
+        <div class="others" id="current-weather-items">
+            <div class="weather-item">
+                <div>Humidity</div>
+                <div>43.2%</div>
+            </div>
+            <div class="weather-item">
+                <div>Pressure</div>
+                <div>121</div>
+            </div>
+            <div class="weather-item">
+                <div>Wind Speed</div>
+                <div>222</div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="place-container">
+        <div class="time-zone" id="time-zone">CST</div>
+        <div class="country" id="country">United States</div>
+    </div>
+
+    <div class="future-forecast">
+        <div class="today" id="current-temp"></div>
             <div class="day">Monday</div>
+            <img src="" alt="weather icon" class="w-icon">
             <div class="temp">Night - 25.6&#176; C</div>
             <div class="temp">Day - 35.6&#176; C</div>
-        </div>
-        <div class="weather-forecast" id="weather-forecast">
-            <div class="weather-forecast-item"></div>
-        </div>
     </div>
+    <div class="weather-forecast" id="weather-forecast">
+        <div class="weather-forecast-item"></div>
+            <div class="today" id="current-temp"></div>
+            <div class="day">Tuesday</div>
+            <img src="" alt="weather icon" class="w-icon">
+            <div class="temp">Night - 25.6&#176; C</div>
+            <div class="temp">Day - 35.6&#176; C</div>
+    </div>
+    <div class="weather-forecast-item"></div>
+        <div class="today" id="current-temp"></div>
+        <div class="day">Wednesday</div>
+        <img src="" alt="weather icon" class="w-icon">
+        <div class="temp">Night - 25.6&#176; C</div>
+        <div class="temp">Day - 35.6&#176; C</div>
+    </div>
+    <div class="weather-forecast-item"></div>
+        <div class="today" id="current-temp"></div>
+        <div class="day">Thursday</div>
+        <img src="" alt="weather icon" class="w-icon">
+        <div class="temp">Night - 25.6&#176; C</div>
+        <div class="temp">Day - 35.6&#176; C</div>
+    </div>
+        <div class="weather-forecast-item"></div>
+        <div class="today" id="current-temp"></div>
+        <div class="day">Friday</div>
+        <img src="" alt="weather icon" class="w-icon">
+        <div class="temp">Night - 25.6&#176; C</div>
+        <div class="temp">Day - 35.6&#176; C</div>
+    </div>
+        <div class="weather-forecast-item"></div>
+        <div class="today" id="current-temp"></div>
+        <div class="day">Saturday</div>
+        <img src="" alt="weather icon" class="w-icon">
+        <div class="temp">Night - 25.6&#176; C</div>
+        <div class="temp">Day - 35.6&#176; C</div>
+    </div>
+        <div class="weather-forecast-item"></div>
+        <div class="today" id="current-temp"></div>
+        <div class="day">Sunday</div>
+        <img src="" alt="weather icon" class="w-icon">
+        <div class="temp">Night - 25.6&#176; C</div>
+        <div class="temp">Day - 35.6&#176; C</div>
+    </div>
+
+
+
+
+
+
+
+</div>
 
 <script src="js/keys.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -69,8 +116,6 @@ OBJECTIVE: GET THE FIVE DAY WEATHER FORECAST TO DISPLAY, DON'T WORRY ABOUT STYLI
     //DO FETCH STUFF
     fetch("https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&units=imperial&appid=" + OWM_KEY)
         .then(response => response.json())
-
-
 
 
 </script>
