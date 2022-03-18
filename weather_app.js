@@ -11,7 +11,7 @@ const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 
 //open weather app
-const API_Key = '6f8469087eee47719da53a754e47ecdb';
+const API_Key = '6f8469087eee47719da53a754e47ecdb'; //exposed my keys, need to fix
 
 //need to update date and time
 //create function
@@ -45,4 +45,5 @@ function getWeatherData () {
 ))
 }
 
+//STOPPED HERE
 function showWeatherData(data)//this is not working
