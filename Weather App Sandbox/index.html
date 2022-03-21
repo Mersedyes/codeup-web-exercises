@@ -25,8 +25,8 @@
             </form>
         </section>
 <!--        allows the reader skip the search bar section-->
-        <a href="#current-forecast" class="skip-link">Skip to Current Conditions</a>
-        <section id="current-forecast" class="current-forecast" role="region" aria-label="weatherLocation">
+        <a href="#currentForecast" class="skip-link">Skip to Current Conditions</a>
+        <section id="currentForecast" class="currentForecast" role="region" aria-labelledby="currentForecast__location">
             <h2 id="currentForecast__location" class="currentForecast__location">Current Conditions</h2>
             <div id="currentForecast__conditions" class="currentForecast__conditions"></div>
         </section>
@@ -57,7 +57,12 @@
             </button>
         </nav>
         <hr>
-        <section id="daily-forecast" class="daily-forecast"></section>
+        <section id="dailyForecast" class="dailyForecast" role="region" aria-labelledby="dailyForecast__title">
+            <h2 id="dailyForecast__title" class="dailyForecast__title">Six Day Forecast</h2>
+            <div id="dailyForecast__contents" class="dailyForecast__contents"></div>
+        </section>
+<!--        dynamically sends information to the reader to let them know the information populated-->
+        <p id="confirmation" class="offscreen" aria-live="assertive"></p>
     </main>
 </body>
 </html>
