@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>First Mapbox Map</title>
     <!-- Mapbox CSS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet'/>
     <!-- Custom CSS -->
 <!--    <style>-->
@@ -19,14 +20,14 @@
 <h1>My First Mapbox Map!</h1>
 
 <!-- The HTML element that serves as the Mapbox container -->
-<div id='map' style="width: 800px; height: 600px;"></div>
+<div id='map' style='width: 800px; height: 600px;'></div>
 
 <!--jQuery-->
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <!-- Mapbox JS -->
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-<link href='https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css' rel='stylesheet'/>
+<!--<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>-->
+<!--<link href='https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css' rel='stylesheet'/>-->
 
 <!-- Mapbox Geocoder Util Methods -->
 <script src="mapbox-geocoder-utils.js"></script>
@@ -34,42 +35,42 @@
 <script src="js/mapbox_maps_api.js"></script>
 
 <!-- Custom JS -->
-<!--<script>-->
+<!--&lt;!&ndash;<script>&ndash;&gt;-->
 
-//    let map = initMap(startingLon, startingLat);
-//    let marker = createMarker(startingLon, startingLat);
-//    let popup = createPopup(startingLon, startingLat);
-//
-//    marker.setPopup(popup);
-//
-//    // function to create marker
-//    function initMap(lon, lat) {
-//        mapboxgl.accessToken = MAP_Key;
-//        return new mapboxgl.Map({
-//            container: 'map',
-//            style: 'mapbox://styles/mapbox/streets-v9',
-//            zoom: 10,
-//            center: [lon, lat]
-//        });
-//    }
-//
-//    // function to create marker
-//    function createMarker(lon, lat) {
-//        return new mapboxgl.Marker()
-//            .setLngLat([lon, lat])
-//            .addTo(map);
-//    }
-//
-//    //can reset map properties programatically
-//    //map.setZoom(5);
-//    //map.setCenter([lat, lon])
-//
-//    function createPopup(lon, lat) {
-//        return new mapboxgl.Popup()
-//            .setLngLat([-98.489615, 29.426827])
-//            .setHTML("<p>Codeup Rocks!</p>")
-//            .addTo(map)
-//    }
-<!--</script>-->
+<!--//    let map = initMap(startingLon, startingLat);-->
+<!--//    let marker = createMarker(startingLon, startingLat);-->
+<!--//    let popup = createPopup(startingLon, startingLat);-->
+<!--//-->
+<!--//    marker.setPopup(popup);-->
+<!--//-->
+<!--//    // function to create marker-->
+<!--//    function initMap(lon, lat) {-->
+<!--//        mapboxgl.accessToken = MAP_Key;-->
+<!--//        return new mapboxgl.Map({-->
+<!--//            container: 'map',-->
+<!--//            style: 'mapbox://styles/mapbox/streets-v9',-->
+<!--//            zoom: 10,-->
+<!--//            center: [lon, lat]-->
+<!--//        });-->
+<!--//    }-->
+<!--//-->
+<!--//    // function to create marker-->
+<!--//    function createMarker(lon, lat) {-->
+<!--//        return new mapboxgl.Marker()-->
+<!--//            .setLngLat([lon, lat])-->
+<!--//            .addTo(map);-->
+<!--//    }-->
+<!--//-->
+<!--//    //can reset map properties programatically-->
+<!--//    //map.setZoom(5);-->
+<!--//    //map.setCenter([lat, lon])-->
+<!--//-->
+<!--//    function createPopup(lon, lat) {-->
+<!--//        return new mapboxgl.Popup()-->
+<!--//            .setLngLat([-98.489615, 29.426827])-->
+<!--//            .setHTML("<p>Codeup Rocks!</p>")-->
+<!--//            .addTo(map)-->
+<!--//    }-->
+<!--&lt;!&ndash;</script>&ndash;&gt;-->
 </body>
 </html>
