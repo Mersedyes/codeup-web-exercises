@@ -32,7 +32,7 @@ body {
 
 .date-container .time {
     font-size: 70px;
-    font-weight: 100;
+    /*font-weight: 100;*/
 }
 
 .date-container #am-pm {
@@ -64,7 +64,7 @@ body {
     background: rgba(24,24,27,0.6);
     padding: 20px;
     border-radius: 10px;
-    margin: 10px;
+    margin: 10px 0;
     border: 1px solid #eeeeee;
 }
 

@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const ampm = hour >= 12 ? 'PM' : 'AM'
         // console.log(timeE1);
 
-        //not working need to understand why
-        timeE1.innerHTML = hoursIn24HrFormat + ':' + mins + ' ' + `<span id="am-pm">${ampm}</span>`;//typeerror: cannot set properties of null (setting 'innerHTML')
+        //got ride of he issue when min was less than 10
+        timeEl.innerHTML = (hoursIn12HrFormat < 10? '0'+hoursIn12HrFormat : hoursIn12HrFormat) + ':' + (minutes < 10? '0'+minutes: minutes)+ ' ' + `<span id="am-pm">${ampm}</span>`
         //not working need to understand why
         dateE1.innerHTML = days[day] + ', ' + date + ' ' + months[month];
     }, 1000); //call the function every second
@@ -74,8 +74,64 @@ function getWeatherData() {
 //
 // }
 
+//this is not showing on my webpage
 function showWeatherData(data) {
     //console.log(data)
     let {humidity, pressure, sunrise, sunset, wind_speed} = data.current;
-    currentWeatherItemsE1.innerHTML =
-}//this is not working
+
+    timeZone.innerHTML = data.timeZone;
+    countryE1.innerHTML = data.latitude + 'N ' + data.longitude+'E'
+
+    currentWeatherItemsE1.innerHTML = `
+                 <div class="weather-item">
+                    <div>Humidity</div>
+                    <div>${humidity}%</div>
+                </div>
+                <div class="weather-item">
+                    <div>${pressure}</div>
+                    <div>121</div>
+                </div>
+                <div class="weather-item">
+                    <div>${wind_speed}</div>
+                    <div>222</div>
+                </div>
+                
+                <div class="weather-item">
+                <div>Sunrise</div>
+                    <div>${window.moment(sunrise * 1000).format('HH:mm a')}</div>
+                </div>
+                <div class="weather-item">
+                <div>Sunset</div>
+                    <div>${window.moment(sunset * 1000).format('HH:mm a')}</div>
+                </div>
+                 `;
+//rendering API data in site THIS IS NOT WORKING
+    let otherDayForecast = '';
+    data.daily.forEach(day, idx) => {
+        if(idx == 0) {
+            currentTempE1.innerHTML = `
+             <img src="http://openweathermap.org/img/wn//${day.weather[0].icon}@4x.png" alt="weather icon" class="w-icon">
+            <div class="other">
+                <div class="day">${window.moment(day.dt * 1000).format('dddd')}</div>
+                <div class="temp">Night - ${day.temp.night}&#176;C</div>
+                <div class="temp">Day - ${day.temp.day}&#176;C</div>
+            </div>
+            
+            `
+        }else{
+            otherDayForcast += `
+            <div class="weather-forecast-item">
+                <div class="day">${window.moment(day.dt * 1000).format('ddd')}</div>
+                <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Night - ${day.temp.night}&#176;C</div>
+                <div class="temp">Day - ${day.temp.day}&#176;C</div>
+            </div>
+            `
+
+    )}
+
+
+    weatherForecastEl.innerHTML = otherDayForcast;
+    }}
+
+
