@@ -59,22 +59,22 @@ function setupMap(center) {
             setTimeout(() => {
                 const marker = new mapboxgl.Marker({
                     //color: "#FFFFFF",
-                    draggable: false,
-                    color: "red",
+                    draggable: true,
+                    color: "teal",
                     scale: 1.5,
                 })
                     .setLngLat([longitude, latitude])
                     .setPopup(
                         new mapboxgl.Popup().setHTML(`
-              <h1>${weatherInfo[0].name}</h1>
+              <h3>${weatherInfo[0].name}</h3>
               <img src="http://openweathermap.org/img/w/${weatherInfo[0].weather[0].icon}.png"></img>
-              <h1>${weatherInfo[0].main.temp}°F</h1>
+              <h3>${weatherInfo[0].main.temp}°F</h3>
               <h3>${weatherInfo[0].weather[0].description}</h3>
               `)
                     )
-
                     .addTo(map);
-
+                        // console.log(latitude)
+                    getWeatherData(latitude, longitude);
                 if ((weatherInfo.length = 0)) {
                     window.location.reload(true);
                 }
