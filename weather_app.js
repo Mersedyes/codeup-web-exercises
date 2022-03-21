@@ -107,7 +107,7 @@ function showWeatherData(data) {
                  `;
 //rendering API data in site THIS IS NOT WORKING
     let otherDayForecast = '';
-    data.daily.forEach(day, idx) => {
+    data.daily.forEach((day, idx) => {
         if(idx == 0) {
             currentTempE1.innerHTML = `
              <img src="http://openweathermap.org/img/wn//${day.weather[0].icon}@4x.png" alt="weather icon" class="w-icon">
@@ -118,7 +118,7 @@ function showWeatherData(data) {
             </div>
             
             `
-        }else{
+        }else {
             otherDayForcast += `
             <div class="weather-forecast-item">
                 <div class="day">${window.moment(day.dt * 1000).format('ddd')}</div>
@@ -128,7 +128,7 @@ function showWeatherData(data) {
             </div>
             `
 
-    )}
+        })}
 
 
     weatherForecastEl.innerHTML = otherDayForcast;
