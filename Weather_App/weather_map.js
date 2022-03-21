@@ -1,49 +1,84 @@
-mapboxgl.accessToken = 'Weather_Map_Key';
+"use strict";
 
-const startingLatitude = -80;
-const startingLongitude = -180;
-const endingLatitude = 80;
-const endingLongitude = 180;
+let weatherInfo = [];
 
-const n = 10;
+// OpenWeatherMaps API KEY
+//let Weather_Map_Key = OWM_Key;
 
+// Mapbox API KEY
+mapboxgl.accessToken = MAP_Key;
+let map;
+//setupMap()
 
-(async() => {
-    const points = [];
-    for (let i=0; i < n; i++) {
-        for (let j=0; j < n; j++) {
-            points.push({
-                lat: startingLatitude + i * (endingLatitude - startingLatitude)/n,
-                lng: startingLongitude + j * (endingLongitude - startingLongitude)/n,
-                val: 0
-            })
-        }
-    }
+// Mapbox API //
 
-    const baseUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&lat=";
-    const apiKey = '385df3d81f3a89c1c99c115735540c6d';
-    const urls = points.map(point => baseUrl + point.lat + "&lon=" + point.lng + "&appid=" + Weather_Map_Key);
+navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {
+    enableHighAccuracy: true,
+});
 
-    const weathers = await Promise.all(urls.map(async url => {
-        const response = await fetch(url);
-        return response.text();
-    }));
+function successLocation(position) {
+    console.log("success call");
+    setupMap([position.coords.longitude, position.coords.latitude]);
+}
 
-    points.forEach((point, index) => {
-        point.val = JSON.parse(weathers[index]).main.temp;
-    })
+function errorLocation() {
+    console.log("we got issues");
+    setupMap([133.7751, 25.2744]);
+}
 
-
-    const map = (window.map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/light-v10'
-    }));
-
-    map.on('load', () => {
-        const layer = interpolateHeatmapLayer.create({
-            points: points,
-            layerID: 'temperature'
-        });
-        map.addLayer(layer, 'road-label');
+function setupMap(center) {
+    map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/streets-v11",
+        center: [-96.7970, 32.7767],
+        zoom: 13,
     });
-})();
+    console.log(map);
+
+    const nav = new mapboxgl.NavigationControl();
+    map.addControl(nav, "top-left");
+
+    // Mapbox GL Geocoder //
+
+    map.addControl(
+        new MapboxGeocoder({
+            accessToken: mapboxgl.accessToken,
+            mapboxgl: mapboxgl,
+            marker: false,
+        }).on("result", (selected) => {
+            const [longitude, latitude] = selected.result.geometry.coordinates;
+
+            fetch(
+                `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${OWM_Key}`
+            )
+                .then((res) => res.json())
+                .then((data) => weatherInfo.push(data));
+
+            // Set marker options.
+
+            setTimeout(() => {
+                const marker = new mapboxgl.Marker({
+                    //color: "#FFFFFF",
+                    draggable: false,
+                    color: "red",
+                    scale: 1.5,
+                })
+                    .setLngLat([longitude, latitude])
+                    .setPopup(
+                        new mapboxgl.Popup().setHTML(`
+              <h1>${weatherInfo[0].name}</h1>
+              <img src="http://openweathermap.org/img/w/${weatherInfo[0].weather[0].icon}.png"></img>
+              <h1>${weatherInfo[0].main.temp}°F</h1>
+              <h3>${weatherInfo[0].weather[0].description}</h3>
+              `)
+                    )
+
+                    .addTo(map);
+
+                if ((weatherInfo.length = 0)) {
+                    window.location.reload(true);
+                }
+            }, 1250);
+        })
+    );
+}

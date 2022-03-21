@@ -80,26 +80,28 @@ function showWeatherData(data) {
     const currentTempE1 = document.getElementById('current-temp');
 
     currentWeatherItemsE1.innerHTML = `
-                 <div class="weather-item">
+    <div class="row justify-content-center">
+                 <div class="weather-item col-2">
                     <div>Humidity</div>
                     <div>${humidity}%</div>
                 </div>
-                <div class="weather-item">
+                <div class="weather-item col-2">
                     <div>Pressure</div>
                     <div>${pressure} mb</div>
                 </div>
-                <div class="weather-item">
+                <div class="weather-item col-2">
                     <div>Wind Speed</div>
                     <div>${wind_speed} m/s</div>
                 </div>
                 
-                <div class="weather-item">
-                <div>Sunrise</div>
+                <div class="weather-item col-2">
+                      <div>Sunrise</div>
                     <div>${window.moment(sunrise * 1000).format('HH:mm a')}</div>
                 </div>
-                <div class="weather-item">
-                <div>Sunset</div>
+                <div class="weather-item col-2">
+                    <div>Sunset</div>
                     <div>${window.moment(sunset * 1000).format('HH:mm a')}</div>
+                </div>
                 </div>
                  `;
 //rendering API data in site THIS IS NOT WORKING
