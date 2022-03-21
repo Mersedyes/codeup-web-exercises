@@ -128,10 +128,10 @@ function showWeatherData(data) {
             </div>
             `
 
-        })}
+        }
 
 
     weatherForecastEl.innerHTML = otherDayForcast;
-    }}
+    }
 
 
