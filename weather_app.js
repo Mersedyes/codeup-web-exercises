@@ -59,21 +59,23 @@ function buildWeatherCard() {
 //call the API
 function getWeatherData() {
     navigator.geolocation.getCurrentPosition((success) => {
-        console.log(success) //got error: malformed arrow function parameter list
+        console.log(success);
 
-        let {lat, lon} = success.coords;
+        let {latitude, longitude} = success.coords;
 
-        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude={part}&appid=${OWM_Key}`).then(res => res.json()).then(data => {
+        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${OWM_Key}`).then(res => res.json()).then(data => {
+            console.log(data);
             showWeatherData(data);
         })
     })
 }
 
-function getForecastData (){
+// function getForecastData (){
+//
+// }
 
-}
-//STOPPED HERE
 function showWeatherData(data) {
-    console.log(data)
-
+    //console.log(data)
+    let {humidity, pressure, sunrise, sunset, wind_speed} = data.current;
+    currentWeatherItemsE1.innerHTML =
 }//this is not working
