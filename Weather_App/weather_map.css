@@ -14,7 +14,38 @@ body {
     height: 100vh;
     font-family: 'Poppins', sans-serif;
 }
+/*NAVBAR STYLING*/
+/* Color of the links BEFORE scroll */
+.navbar-scroll .nav-link,
+.navbar-scroll .navbar-toggler-icon,
+.navbar-scroll .navbar-brand {
+    color: #fff;
+}
 
+/* Color of the links AFTER scroll */
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-toggler-icon,
+.navbar-scrolled .navbar-brand {
+    color: #fff;
+}
+
+/* Color of the navbar AFTER scroll */
+.navbar-scroll,
+.navbar-scrolled {
+    background-color: #cbbcb1;
+}
+
+.mask-custom {
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, .15);
+}
+
+.navbar-brand {
+    font-size: 1.75rem;
+    letter-spacing: 3px;
+}
+
+/*WEATHER STYLING*/
 .container {
     padding: 20px 70px;
     color: white;
@@ -29,6 +60,8 @@ body {
 .date-container {
    font-weight: 100;
     padding-bottom: 1rem;
+    padding-top: 80px;
+
 }
 
 .date-container .time {
@@ -149,10 +182,10 @@ body {
 
 /*MAP STYLING*/
 #map {
-    height: 500px;
+    height: 400px;
     width: 75%;
-    border: 1px solid #eeeeee;
-    box-shadow: .75em .75em 1em rgba(255,255,255, 0.5);
+    border: 1px solid #cbbcb1;
+    box-shadow: .75em .75em 1em rgba(203,188,177, 1);
 }
 
 .mapboxgl-ctrl-bottom-left, .mapboxgl-ctrl-bottom-right {
