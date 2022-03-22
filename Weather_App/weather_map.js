@@ -81,4 +81,6 @@ function setupMap(center) {
             }, 1250);
         })
     );
+    document.getElementById('geocoder-search-bar').appendChild(geocoder.onAdd(map));
+
 }

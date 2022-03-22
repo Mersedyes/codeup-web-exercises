@@ -84,6 +84,7 @@
         </div>
     </div>
 </nav>
+
 <!-- MORNING CHALLENGE
 OBJECTIVE: GET THE FIVE DAY WEATHER FORECAST TO DISPLAY, DON'T WORRY ABOUT STYLING YET
 1. HOW MIGHT WE GET THE WEATHER BASED ON USER INPUT?-->
@@ -95,12 +96,12 @@ OBJECTIVE: GET THE FIVE DAY WEATHER FORECAST TO DISPLAY, DON'T WORRY ABOUT STYLI
 
     <div class="date-container">
         <section class="d-flex row">
-            <div class="time col-6" id="time">
+            <div class="time col-7" id="time">
                 12:30 <span id="am-pm">PM</span>
             </div>
-            <div class="place-container col-6">
-                <div class="time-zone" id="time-zone">CST</div>
-                <div class="country" id="country">United States</div>
+            <div class="place-container d-flex align-items-center col-5 row justify-items-end">
+                <div class="time-zone col-12" id="time-zone">CST</div>
+                <div class="country col-12" id="country">United States</div>
             </div>
         </section>
         <div class="date" id="date">
@@ -111,6 +112,9 @@ OBJECTIVE: GET THE FIVE DAY WEATHER FORECAST TO DISPLAY, DON'T WORRY ABOUT STYLI
     <div class="others" id="current-weather-items"></div>
 </div>
 
+<section id="geocoder-search-bar" class="geocoder-search-bar">
+
+</section>
 
 <!--map -->
 <section class="d-flex justify-content-center">

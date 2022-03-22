@@ -211,8 +211,26 @@ body {
     color: rgb(104, 104, 104);
 }
 
+.geocoder-search-bar {
+     position: absolute;
+     z-index: 1;
+     width: 50%;
+     left: 50%;
+     margin-left: -25%;
+     top: 10px;
+ }
+
+.mapboxgl-ctrl-geocoder {
+    min-width: 100%;
+}
+#map {
+    margin-top: 75px;
+}
+
+
+
 /*SCREEN SPECIFICATIONS*/
-@media only screen and  (max-width:730px){
+@media only screen and  (max-width:768px){
 
     .container{
         padding: 20px;
@@ -256,10 +274,27 @@ body {
     .current-info .others .weather-item{
         font-size: 14px;
     }
-    #map {
+
+    .future-forecast {
         display: none !important;
     }
 
+}
+@media only screen and (min-width: 768px){
+    .future-forecast{
+        justify-content: start;
+        align-items: none;
+        overflow-x: scroll;
+
+        /*height: 100px;*/
+    }
+    #map {
+        height: 350px;
+        width: 75%;
+        display: block;
+        margin-top: 0px;
+    }
+    body {}
 }
 
 @media only screen and (max-width: 1400px){
