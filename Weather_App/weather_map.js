@@ -29,7 +29,7 @@ function errorLocation() {
 function setupMap(center) {
     map = new mapboxgl.Map({
         container: "map",
-        style: "mapbox://styles/mapbox/streets-v11",
+        style: "mapbox://styles/mapbox/satellite-v9",
         center: [-96.7970, 32.7767],
         zoom: 13,
     });

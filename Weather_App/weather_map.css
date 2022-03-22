@@ -151,6 +151,8 @@ body {
 #map {
     height: 500px;
     width: 75%;
+    border: 1px solid #eeeeee;
+    box-shadow: .75em .75em 1em rgba(255,255,255, 0.5);
 }
 
 .mapboxgl-ctrl-bottom-left, .mapboxgl-ctrl-bottom-right {
@@ -220,6 +222,9 @@ body {
 
     .current-info .others .weather-item{
         font-size: 14px;
+    }
+    #map {
+        display: none !important;
     }
 
 }
