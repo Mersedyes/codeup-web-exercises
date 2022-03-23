@@ -75,3 +75,17 @@ let instructorString = users.reduce((resultString, user) =>{
 }, 'Your instructors are: ');
 
 console.log(instructorString);
+
+
+//Bonus
+let languages = users.reduce((listOfLanguages, user) => {
+
+    user.languages.forEach(function (lang) {
+        // console.log(listOfLanguages);
+        if (!listOfLanguages.includes(lang)) {
+            listOfLanguages.push(lang);
+        }
+    })
+    return listOfLanguages;
+}, [])
+console.log(languages);
